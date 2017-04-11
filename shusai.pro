@@ -2,7 +2,9 @@ QT += qml quick
 
 CONFIG += c++11
 
-SOURCES += src/main.cpp
+SOURCES += src/main.cpp \
+    src/event.cpp
+
 
 RESOURCES += qml/qml.qrc
 
@@ -27,3 +29,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+HEADERS += \
+    include/event.h
