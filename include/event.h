@@ -14,16 +14,28 @@ class Event : public QObject
     Q_OBJECT
 
 public:
-    explicit Event(QObject *parent = 0);
-    Event(QString Name, QString Desc, QDateTime Begin, qint64 Duration, QObject *parent = 0)
-        : name(Name),
-        description(Desc),
-        beginTime(Begin),
-        duration(Duration),
+    explicit Event(QObject *parent = Q_NULLPTR)
+        : name(""),
+        description(""),
+        duration(0),
         notify(0),
         repeat(0),
         repeatFreq(0),
-        QObject(parent){}
+        QObject(parent)
+        {
+        }
+
+    Event(QString nameArg, QString descArg, QDateTime beginArg, qint64 durationArg, QObject *parent = Q_NULLPTR)
+        : name(nameArg),
+        description(descArg),
+        beginTime(beginArg),
+        duration(durationArg),
+        notify(0),
+        repeat(0),
+        repeatFreq(0),
+        QObject(parent)
+        {
+        }
 
     Q_PROPERTY(QString name
                READ getName

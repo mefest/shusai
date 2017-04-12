@@ -2,6 +2,9 @@ QT += qml quick
 
 CONFIG += c++11
 
+HEADERS += \
+    include/event.h
+
 SOURCES += src/main.cpp \
     src/event.cpp
 
@@ -30,5 +33,4 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-HEADERS += \
-    include/event.h
+
