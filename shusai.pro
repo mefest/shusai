@@ -1,8 +1,17 @@
 QT += qml quick
 
+QT += sql
+
 CONFIG += c++11
 
-SOURCES += src/main.cpp
+HEADERS += \
+    include/event.h \
+    include/database.h
+
+SOURCES += src/main.cpp \
+    src/event.cpp \
+    src/database.cpp
+
 
 RESOURCES += qml/qml.qrc
 
@@ -27,3 +36,5 @@ DEFINES += QT_DEPRECATED_WARNINGS
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
