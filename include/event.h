@@ -2,8 +2,7 @@
 // Licensed under the GPLv3 license as published by Free Software Foundation.
 // https://www.gnu.org/licenses/gpl-3.0-standalone.html
 
-#ifndef EVENT_H
-#define EVENT_H
+#pragma once
 
 #include <QDateTime>
 #include <QString>
@@ -144,7 +143,6 @@ public:
 
 
 private:
-    //Checklist
     QString name;
     QString description;
     QDateTime beginTime;
@@ -156,4 +154,3 @@ private:
 };
 
 
-#endif // EVENT_H
