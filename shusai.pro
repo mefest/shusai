@@ -1,12 +1,16 @@
 QT += qml quick
 
+QT += sql
+
 CONFIG += c++11
 
 HEADERS += \
-    include/event.h
+    include/event.h \
+    include/database.h
 
 SOURCES += src/main.cpp \
-    src/event.cpp
+    src/event.cpp \
+    src/database.cpp
 
 
 RESOURCES += qml/qml.qrc

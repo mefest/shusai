@@ -15,27 +15,27 @@ class Event : public QObject
 
 public:
     explicit Event(QObject *parent = Q_NULLPTR)
-        : name(""),
-        description(""),
-        duration(0),
-        notify(0),
-        repeat(0),
-        repeatFreq(0),
-        QObject(parent)
-        {
-        }
+        : name("")
+        , description("")
+        , duration(0)
+        , notify(0)
+        , repeat(0)
+        , repeatFreq(0)
+        , QObject(parent)
+    {
+    }
 
     Event(QString nameArg, QString descArg, QDateTime beginArg, qint64 durationArg, QObject *parent = Q_NULLPTR)
-        : name(nameArg),
-        description(descArg),
-        beginTime(beginArg),
-        duration(durationArg),
-        notify(0),
-        repeat(0),
-        repeatFreq(0),
-        QObject(parent)
-        {
-        }
+        : name(nameArg)
+        , description(descArg)
+        , beginTime(beginArg)
+        , duration(durationArg)
+        , notify(0)
+        , repeat(0)
+        , repeatFreq(0)
+        , QObject(parent)
+    {
+    }
 
     Q_PROPERTY(QString name
                READ getName
